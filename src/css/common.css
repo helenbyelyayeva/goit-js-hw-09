@@ -41,3 +41,9 @@ img {
 button{
   cursor: pointer;
 }
+
+.label{
+  font-weight: normal;
+  text-transform: uppercase;
+  font-size: 15px;
+}

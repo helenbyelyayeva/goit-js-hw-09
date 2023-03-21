@@ -9,6 +9,19 @@ const daysEl = document.querySelector('span[data-days]');
 const hoursEl = document.querySelector('span[data-hours]');
 const minutesEl = document.querySelector('span[data-minutes]');
 const secondsEl = document.querySelector('span[data-seconds]');
+const divEl = document.querySelector('.timer');
+const divElAll = divEl.querySelectorAll('.field');
+console.log(divElAll);
+
+divEl.style.cssText =
+  'font-size: 20px; font-weight: bold; display: flex;  gap:30px; margin-top: 20px;';
+
+divElAll.forEach(
+  e =>
+    (e.style.cssText =
+      ' text-transform: uppercase; display: flex; flex-direction: column; align-items: center;')
+);
+
 
 startEl.disabled = true;
 const options = {
@@ -71,6 +84,7 @@ function convertMs(ms) {
  const minute = second * 60;
  const hour = minute * 60;
  const day = hour * 24;
+
  const days = Math.floor(ms / day);
  const hours = Math.floor((ms % day) / hour);
  const minutes = Math.floor(((ms % day) % hour) / minute);
