@@ -19,7 +19,7 @@ divEl.style.cssText =
 divElAll.forEach(
   e =>
     (e.style.cssText =
-      ' text-transform: uppercase; display: flex; flex-direction: column; align-items: center;')
+      ' display: flex; flex-direction: column; align-items: center;')
 );
 
 
